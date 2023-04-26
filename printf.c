@@ -35,12 +35,3 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (i);
 }
-int main(void)
-{
-	_printf("Joel is Nice\n");
-	_printf("%c's birthday is tomorrow\n", 'A');
-	_printf("%%, %c is tawp\n", 'Z');
-	_printf("String:[%s]\n", "I am a string !");
-	
-	return (0);
-}
