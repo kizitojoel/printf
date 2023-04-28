@@ -25,6 +25,8 @@ int _printf(const char *format, ...)
 				while (*str != '\0')
 					_putchar(*str++);
 			}
+			if (format[1] == 'd')
+				print_numbers(va_arg(args, int));
 			format += 2;
 			i += 2;
 			continue;

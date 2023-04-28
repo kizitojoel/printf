@@ -1,0 +1,2 @@
+#!/bin/bash
+gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format test.c print_numbers.c _putchar.c -o b
