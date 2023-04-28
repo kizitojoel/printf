@@ -47,7 +47,7 @@ int _printf(const char *format, ...)
 				}
 				format += 2;
 			}
-			else if (format[1] == 'd')
+			else if (format[1] == 'd' || format[1] == 'i')
 			{
 				print_numbers(va_arg(args, int));
 				format += 2;
