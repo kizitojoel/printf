@@ -17,6 +17,8 @@ int _printf(const char *format, ...)
 	int holder __attribute__((unused));
 	char *str __attribute__((unused));
 	va_start(args, format);
+	if (format == NULL)
+		return(-1);
 	while (*(format) != '\0')
 	{
 		if (*format == 37)
