@@ -25,8 +25,12 @@ int _printf(const char *format, ...)
 		{
 			if (format[1] == 'c')
 			{
-				_putchar(va_arg(args, int));
-				i += 1; format += 2;
+				c = va_arg(args, int);
+				if (c)
+				{
+					_putchar(c);
+					i += 1; format += 2;
+				}
 			}
 			else if (format[1] == '%')
 			{
@@ -36,7 +40,7 @@ int _printf(const char *format, ...)
 			else if (format[1] == 's')
 			{
 				str = va_arg(args, char*);
-				while (*str != '\0')
+				while (str && *str != '\0')
 				{
 					i += 1;
 					_putchar(*str++);
