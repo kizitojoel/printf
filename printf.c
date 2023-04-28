@@ -26,12 +26,12 @@ int _printf(const char *format, ...)
 				_putchar(va_arg(args, int));
 				i += 1; format += 2;
 			}
-			if (format[1] == '%')
+			else if (format[1] == '%')
 			{
 				_putchar('%');
 				i += 1, format += 2;
 			}
-			if (format[1] == 's')
+			else if (format[1] == 's')
 			{
 				str = va_arg(args, char*);
 				while (*str != '\0')
@@ -41,11 +41,13 @@ int _printf(const char *format, ...)
 				}
 				format += 2;
 			}
-			if (format[1] == 'd')
+			else if (format[1] == 'd')
 			{
 				print_numbers(va_arg(args, int));
 				format += 2;
 			}
+			else
+				format++;
 			continue;
 		}
 		_putchar(*format++);

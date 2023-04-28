@@ -11,5 +11,7 @@ int main(void)
 	_printf("%d\n", n);
 	n = _printf("%c%c\n", 'a', 'b');
 	_printf("%d\n", n);
+	n = _printf("%c% %c\n", 'a', 'b');
+	_printf("%d\n", n);
 	return (0);
 }
